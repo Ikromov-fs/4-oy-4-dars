@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+
+.body {
+    background-color: #080303;
+    transition: 1.5s;
+    color:#fff;
+    transform: rotate(360deg);
+    transform-origin: 60% 30%;
+}
+
+.from {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form__label {
+    margin-top: 20px;
+}
+
+.form__label__input {
+    padding: 8px 26px;
+    border-radius: 6px;
+    display: flex;
+    text-align: center;
+}
+
+.form__label__button {
+    padding: 8px 83px;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.form__label__button:active {
+    background-color: #c77811;
+}
+
+.form__label__button:hover {
+    background-color: #60e1e1;
+}
+
+
+.body__part {
+    background-image: url("../img/bg-desktop-dark.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.todo__div__h2 {
+    color: #fff;
+    font-size: 38px;
+}
+
+.todo__div__p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.todo__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.div__img {
+    display: flex;
+    gap: 20px;
+}
+
+.todo__div__div {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+}
+
+.rezult__li{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rezult__li:checked {
+    color: #000;
+}
+.rezult__li span:hover{
+  color: #fff;
+  cursor: pointer;
+}
+
+.rezult__li span:active{
+  color: #92ec68;
+  cursor: pointer;
+}
+
+.rezult__ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.div__img #theme {
+    display: none;
+  }
+  
+  .div__img #theme + label::before {
+    content: "";
+    background: url("../img/icon-sun.svg");
+    display: block;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+  }
+  
+  .div__img #theme:checked + label::before {
+    background: url("../img/icon-moon.svg")
+  };
