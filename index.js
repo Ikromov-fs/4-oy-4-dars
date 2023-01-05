@@ -20,17 +20,20 @@ __form.addEventListener('submit', (e) => {
 
     let rezultN = document.createElement("span");
     let rezultX = document.createElement("span");
-    rezultN.textContent = "↺"
-    rezultX.textContent = "X"
+    let rezultBack = document.createElement("span");
+    rezultN.textContent = "↺";
+    rezultBack.textContent = "Add";
+    rezultX.textContent = "X";
 
     rezultLi.append(rezultP);
     rezultLi.append(rezultN);
+    rezultLi.append(rezultBack);
     rezultLi.append(rezultX);
     __rezultOl.append(rezultLi);
 
 
-
-
+    
+    
     rezultP.addEventListener('click', () => {
         rezultP.style.color = "green"
     });
@@ -39,6 +42,12 @@ __form.addEventListener('submit', (e) => {
         rezultP.style.color = "red"
     })
     
+    
+    rezultBack.addEventListener('click', () => { 
+        rezultLi.textContent = "";
+        __input.value = rezultP.textContent;
+    })
+
     rezultX.addEventListener('click', () => {
         rezultLi.remove();
     });
